@@ -1,11 +1,17 @@
 
-*npm install*
-*bower install*
+#Mercadito
 
-for development:
-*npm run start*
+## Setup
+1. npm install
+2. bower install
 
-for distribution:
-*npm run build*
+## How to run it?
+
+###for development:
+**npm run start**
+
+###for distribution:
+**npm run build**
+
 
 start changing stuff.
