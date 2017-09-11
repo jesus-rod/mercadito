@@ -22,7 +22,7 @@ class SingleView extends React.Component {
                     </div>
                     { /* END Language list */ }
                     Dashboard
-                    <small data-localize="dashboard.WELCOME">Welcome to Angle!</small>
+                    <small data-localize="dashboard.WELCOME">Mercadito!</small>
                 </div>
                 <Row>
                     <Col xs={12} className="text-center">

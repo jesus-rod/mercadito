@@ -105,20 +105,57 @@ class Sidebar extends React.Component {
                                 <div className="nav-item" onClick={ this.toggleItemCollapse.bind(this, 'submenu') }>
                                     <div className="pull-right label label-info">1</div>
                                     <em className="icon-speedometer"></em>
-                                    <span data-localize="sidebar.nav.MENU">Menu</span>
+                                    <span data-localize="sidebar.nav.MENU">Productos</span>
                                 </div>
                                 <Collapse in={ this.state.collapse.submenu } timeout={ 100 }>
                                     <ul id="submenu" className="nav sidebar-subnav">
-                                        <li className="sidebar-subnav-header">Submenu</li>
+                                        <li className="sidebar-subnav-header"></li>
                                         <li className={ this.routeActive('submenu') ? 'active' : '' }>
                                             <Link to="submenu" title="Submenu">
-                                            <span data-localize="sidebar.nav.SUBMENU">Submenu</span>
+                                            <span data-localize="sidebar.nav.SUBMENU">Ventas</span>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </Collapse>
+                                
+                            </li>
+                            <li className={ this.routeActive(['ecommerce-orders', 'ecommerce-order-view', 'ecommerce-products', 'ecommerce-product-view']) ? 'active' : '' }>
+                                <div className="nav-item" title="Ecommerce" onClick={ this.toggleItemCollapse.bind(this, 'ecommerce') }>
+                                    <em className="icon-basket-loaded"></em>
+                                    <span>eCommerce</span>
+                                </div>
+                                <Collapse in={ this.state.collapse.ecommerce }>
+                                    <ul id="" className="nav sidebar-subnav">
+                                        <li className="sidebar-subnav-header">eCommerce</li>
+                                        <li className={ this.routeActive('ecommerce-orders') ? 'active' : '' }>
+                                            <Link to="ecommerce-orders" title="Orders">
+                                            <div className="pull-right label label-info">10</div>
+                                            <span>Orders</span>
+                                            </Link>
+                                        </li>
+                                        <li className={ this.routeActive('ecommerce-order-view') ? 'active' : '' }>
+                                            <Link to="ecommerce-order-view" title="Order View">
+                                            <span>Order View</span>
+                                            </Link>
+                                        </li>
+                                        <li className={ this.routeActive('ecommerce-products') ? 'active' : '' }>
+                                            <Link to="ecommerce-products" title="Products">
+                                            <span>Products</span>
+                                            </Link>
+                                        </li>
+                                        <li className={ this.routeActive('ecommerce-product-view') ? 'active' : '' }>
+                                            <Link to="ecommerce-product-view" title="Product View">
+                                            <span>Product View</span>
+                                            </Link>
+                                        </li>
+                                        <li className={ this.routeActive('ecommerce-checkout') ? 'active' : '' }>
+                                            <Link to="ecommerce-checkout" title="Checkout">
+                                            <span>Checkout</span>
                                             </Link>
                                         </li>
                                     </ul>
                                 </Collapse>
                             </li>
-
                         </ul>
                         { /* END sidebar nav */ }
                     </nav>

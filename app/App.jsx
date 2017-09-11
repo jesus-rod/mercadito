@@ -24,6 +24,14 @@ import BaseHorizontal from './components/Layout/BaseHorizontal';
 import SingleView from './components/SingleView/SingleView';
 import SubMenu from './components/SubMenu/SubMenu';
 
+// ecommerce imports
+import EcommerceOrder from './components/Ecommerce/EcommerceOrders';
+import EcommerceOrderView from './components/Ecommerce/EcommerceOrderView';
+import EcommerceProduct from './components/Ecommerce/EcommerceProducts';
+import EcommerceProductView from './components/Ecommerce/EcommerceProductView';
+import EcommerceCheckout from './components/Ecommerce/EcommerceCheckout';
+
+
 // Application Styles
 import './styles/bootstrap.scss';
 import './styles/app.scss'
@@ -53,6 +61,12 @@ ReactDOM.render(
 
             <Route path="singleview" component={SingleView}/>
             <Route path="submenu" component={SubMenu}/>
+
+            <Route path="ecommerce-orders" component={EcommerceOrder}/>
+            <Route path="ecommerce-order-view" component={EcommerceOrderView}/>
+            <Route path="ecommerce-products" component={EcommerceProduct}/>
+            <Route path="ecommerce-product-view" component={EcommerceProductView}/>
+            <Route path="ecommerce-checkout" component={EcommerceCheckout}/>
 
         </Route>
 
